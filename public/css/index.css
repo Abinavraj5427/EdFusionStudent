@@ -5,15 +5,8 @@
 }
 
 body {
-    /* background-color: #FAF1F1; */
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 100vh;
-    background: var(--background); */
 }
 
 .box {
