@@ -29,7 +29,7 @@ function updateConfusion(confusion){
         body: JSON.stringify({code: parseInt(code), student_id: parseInt(student_id), confusion: parseInt(confusion)}),
     })
     .then(data => {
-        console.log('Success:', data);
+        // console.log('Success:', data);
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -49,7 +49,7 @@ function sendQuestion(){
         body: JSON.stringify({code: parseInt(code), student_id: parseInt(student_id), question: question}),
     })
     .then(data => {
-        console.log('Success:', data);
+        // console.log('Success:', data);
     })
     .catch((error) => {
         console.error('Error:', error);
