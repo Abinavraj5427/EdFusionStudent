@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const MongoClient = require('mongodb').MongoClient;
-// const axios = require('axios');
 
 const uri = "mongodb+srv://abigod:bubbles@cluster0.zetfo.mongodb.net/edfusion?retryWrites=true&w=majority";
 
@@ -82,7 +81,7 @@ router.post('/question', (req, res, next) => {
         //get classroom id
         collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
-            console.log(classroom);
+            // console.log(classroom);
             // res.send(classroom[0]._id);
             var id = classroom[0]._id;
             classroom[0].questions.push({
@@ -103,15 +102,65 @@ router.post('/question', (req, res, next) => {
 });
 
 //add reviews to classroom
-router.put('/reviews', (req, res, next) => {
+router.post('/rating', (req, res, next) => {
+    MongoClient.connect(uri)
+    .then((mongo) => {
+        console.log("Add the rating");
+        console.log('Asking a question');
+
+        const collection = mongo.db("edfusion").collection("classrooms");
+        //get classroom id
+        collection.find({code: req.body.code}).toArray()
+        .then((classroom) => {
+            console.log(classroom);
+            // res.send(classroom[0]._id);
+            var id = classroom[0]._id;
+            classroom[0].ratings.push(req.body.rating)
+            var update = {$set: {ratings: classroom[0].ratings}};
+            collection.updateOne({_id: id}, update)
+            .then(data => {
+                res.send("Sent rating successfully");
+                // res.json(data)
+            }).catch(err => console.log(err))
+        })
+        .catch(err => console.log(err));
+            
+    })
+    .catch(function (err) {console.log(err)})
     
 });
 
-//update data
-router.put('/data', (req, res, next) => {
+//update confusion
+router.post('/confusion', (req, res, next) => {
+  
+    MongoClient.connect(uri)
+    .then((mongo) => {
+        console.log('Connected to database');
+        console.log('Updating confusion');
+        console.log(req.body);
+
+        const collection = mongo.db("edfusion").collection("classrooms");
+        //get classroom id
+        collection.find({code: req.body.code}).toArray()
+        .then((classroom) => {
+            var id = classroom[0]._id;
+            var students = classroom[0].students;
+            for(let i = 0; i< students.length; i++){
+                if(students[i].student_id === req.body.student_id){
+                    students[i].confusion = req.body.confusion;
+                }
+            }
+            console.log(students);
+            var update = {$set: {students: classroom[0].students}};
+            collection.updateOne({_id: id}, update)
+            .then(data => {
+                res.send("Successfully updated confusion");
+            }).catch(err => console.log(err))
+        })
+        .catch(err => console.log(err));
+    }).catch(err => console.log(err));
     
 });
-
 
 
 
