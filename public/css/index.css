@@ -7,8 +7,9 @@
 }
 
 body {
-    /* background-color: #FAF1F1; */
+    background-color: #FAF1F1;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -45,7 +46,7 @@ body {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     /* background: var(--background); */
@@ -57,6 +58,7 @@ body {
     color: #8039B4;
     padding: 20px;
     text-align: center;
+    font-size: 4em;
 }
 
 #m3 {
@@ -72,10 +74,11 @@ body {
 }
 
 .button{
+    margin: 2%;
     background-color: #4e39b4;
     color: #faf1f1;
-    height: 40px;
-    width: 100px;
+    height: 50px;
+    width: 300px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -88,14 +91,11 @@ body {
 }
 
 input[type=text]{
-    text-align: center;
-
-     width: 250px;
-     height: 50px;
- 
+    text-align: center;   
+    font-size: 3vh;
+    width: 300px;
+    height: 50px;
     border: 1.10px solid #490AAA;
- 
     border-radius: 5px;
- 
  }
  
