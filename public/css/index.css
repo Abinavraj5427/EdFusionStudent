@@ -1,3 +1,4 @@
+@import url('../assets/type/metropolis/metropolis.css');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +7,7 @@
 
 body {
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: metropolisbold, Geneva, Tahoma, sans-serif;
 }
 
 .box {
@@ -26,11 +27,11 @@ body {
   z-index: -1;
   width: 300vh;
   height: 300vh;
-  background: #faf1f1;
+  background: #C31D6C;
   top: -50vh;
   transform: translateX(-50%) rotate(0deg);
   border-radius: 45%;
-  animation: fill 7s ease-in-out infinite;
+  animation: fill 7s ease-in infinite;
 }
 
 @keyframes fill {
@@ -78,38 +79,38 @@ body {
   margin: 2%;
   background-color: #4e39b4;
   color: #faf1f1;
-  height: 50px;
-  width: 300px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  padding: 5px;
+  width: 250px;
+  padding: 10px 0px;
   font-size: 3vh;
   outline: none;
   border-style: none;
   border-width: 0px;
+  font-family: metropolisbold, sans-serif;
 }
 
 .button:hover {
-  box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
   background-color: #342679;
 }
 
-input[type="text"]::placeholder {
-    font-weight: bold;	
+input[type="number"]::placeholder {
+  font-weight: bold;
   color: #c31d6c;
-  
+  opacity: 0.75;
 }
-input[type="text"] {
 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+input[type="number"] {
+  margin: 10px;
+  font-family: metropolisregular, Geneva, Tahoma, sans-serif;
   text-align: center;
-  font-size: 3vh;
-  width: 300px;
+  font-size: 1.5em;
+  width: 250px;
   height: 50px;
   border: 1.1px solid #490aaa;
-  border-radius: 5px;
-
+  border-radius: 10px;
   color: #c31d6c;
+  background-color: rgba(255, 255, 255, 0.75);
+  outline: none;
 }
-

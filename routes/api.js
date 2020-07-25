@@ -34,13 +34,14 @@ router.post('/status', (req, res, next) => {
             console.log(err)
             res.json({msg:'ended'});
         });
+
     }).catch(err => {
         console.log(err)
         res.json({msg:'ended'});
-    });
+    }).finally(() => {
+        MongoClient.close()
+    })
 });
-
-
 
 
 //add the student to classroom
@@ -76,7 +77,9 @@ router.post('/student', (req, res, next) => {
         .catch(err => console.log(err));
             
     })
-    .catch(function (err) {console.log(err)})
+    .catch(function (err) {console.log(err)}).finally(() => {
+        MongoClient.close()
+    })
 });
 
 
@@ -108,7 +111,9 @@ router.post('/question', (req, res, next) => {
         .catch(err => console.log(err));
             
     })
-    .catch(function (err) {console.log(err)})
+    .catch(function (err) {console.log(err)}).finally(() => {
+        MongoClient.close()
+    })
 });
 
 //add reviews to classroom
@@ -135,8 +140,9 @@ router.post('/rating', (req, res, next) => {
         .catch(err => console.log(err));
             
     })
-    .catch(function (err) {console.log(err)})
-    
+    .catch(function (err) {console.log(err)}).finally(() => {
+        MongoClient.close()
+    })
 });
 
 //update confusion
@@ -166,8 +172,9 @@ router.post('/confusion', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-    }).catch(err => console.log(err));
-    
+    }).catch(err => console.log(err)).finally(() => {
+        MongoClient.close()
+    })
 });
 
 //add reviews to classroom
@@ -192,10 +199,10 @@ router.post('/review', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-            
     })
-    .catch(function (err) {console.log(err)})
-    
+    .catch(function (err) {console.log(err)}).finally(() => {
+        MongoClient.close()
+    })
 });
 
 module.exports = router;
