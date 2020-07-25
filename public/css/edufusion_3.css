@@ -9,7 +9,6 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   animation: pulse 3s ;
   animation-direction: alternate;
-  animation-iteration-count: 1;
   animation-iteration-count: infinite;
   text-align: center;
 }
@@ -67,37 +66,9 @@ body {
   box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
 }
 
-
-
 .star {
   cursor: pointer;
-
-
 }
-
-.star::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    border-radius: 5px;
-    /*box-shadow: 0 5px 15px rgba(0,0,0,0.3);*/
-    transition: opacity 0.3s ease-in-out;
-  }
-
-.star:hover{
-  transform: scale(1.2, 1.2);
-}
-
-.star:hover::after {
-    opacity: 1;
-  }
-/* img:hover {
-    
-    background-image: url("Icon_material-star.svg") no-repeat;
-     
 
 @media only screen and (max-width: 768px) {
   .button {
