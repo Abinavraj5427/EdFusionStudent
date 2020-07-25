@@ -4,6 +4,7 @@
 
 <head>
    <link rel="stylesheet" href="./css/edufusion_2.css">
+   <script src = "./js/edfusion2.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
    </div>
 
    <div class="slidecontainer">
-      <input class="slider" id="myRange" type="range" min="1" max="100" value="50">
+      <input class="slider" id="myRange" type="range" min="1" max="100" value="50" oninput="updateConfusion(this.value)" onchange="updateConfusion(this.value)">
 
    </div>
 
