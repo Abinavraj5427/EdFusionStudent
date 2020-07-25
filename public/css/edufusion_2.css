@@ -1,13 +1,19 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
 body {
   background-color: #faf1f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
 
 .brand {
   background-color: #faf1f1;
   color: #8039b4;
   padding: 10px;
-  text-align: center;
 }
 
 #conf_para {
@@ -16,8 +22,7 @@ body {
 }
 
 .slidecontainer {
-  width: 100%;
-  margin: auto;
+  width: 50%;
 }
 
 .slider {
@@ -100,6 +105,10 @@ input[type="submit"] {
   .slidecontainer {
     width: 80%;
   }
+}
+
+.question{
+   width:50%;
 }
 
 .button {
