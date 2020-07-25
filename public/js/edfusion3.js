@@ -35,7 +35,21 @@ function submitReview(){
     })
     .then(data => {
         // console.log('Success:', data);
-        window.location.href = "./index.html";
+        fetch('http://localhost:8080/api/review', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({code: parseInt(code), review: (document.getElementById("field").value)}),
+        })
+        .then(data => {
+            // console.log('Success:', data);
+            window.location.href = "./index.html";
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
     })
     .catch((error) => {
         console.error('Error:', error);

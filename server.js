@@ -6,6 +6,7 @@ const bodyparser = require('body-parser');
 
 const app = express();
 
+app.use(express.static('public'))
 // const uri = "mongodb+srv://abigod:bubbles@cluster0.zetfo.mongodb.net/edfusion?retryWrites=true&w=majority";
 
 // MongoClient.connect(uri)
@@ -22,7 +23,7 @@ const app = express();
 // .catch(function (err) {console.log(err)})
 
 //port
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 //middlewares
 app.use(cors());

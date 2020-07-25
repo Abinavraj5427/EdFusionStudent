@@ -48,7 +48,6 @@ router.post('/student', (req, res, next) => {
     // console.log(req.body);
     MongoClient.connect(uri)
     .then((mongo) => {
-        console.log('Connected to database');
         console.log('Adding Student to DB');
 
         const collection = mongo.db("edfusion").collection("classrooms");
@@ -86,7 +85,6 @@ router.post('/question', (req, res, next) => {
     
     MongoClient.connect(uri)
     .then((mongo) => {
-        console.log('Connected to database');
         console.log('Asking a question');
 
         const collection = mongo.db("edfusion").collection("classrooms");
@@ -118,7 +116,6 @@ router.post('/rating', (req, res, next) => {
     MongoClient.connect(uri)
     .then((mongo) => {
         console.log("Add the rating");
-        console.log('Asking a question');
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
@@ -147,7 +144,6 @@ router.post('/confusion', (req, res, next) => {
   
     MongoClient.connect(uri)
     .then((mongo) => {
-        console.log('Connected to database');
         console.log('Updating confusion');
         // console.log(req.body);
 
@@ -179,7 +175,6 @@ router.post('/review', (req, res, next) => {
     MongoClient.connect(uri)
     .then((mongo) => {
         console.log("Add the review");
-        console.log('Asking a question');
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
