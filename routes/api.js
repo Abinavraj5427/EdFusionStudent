@@ -18,6 +18,7 @@ router.post('/status', (req, res, next) => {
         collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             if(classroom.length == 0) res.json({msg:'ended'});
+            else if(classroom.finished) res.json({msg:'ended'});
             else{
                 // console.log(classroom)
                 var students = classroom[0].students;
@@ -29,8 +30,14 @@ router.post('/status', (req, res, next) => {
                 }
             }
         })
-        .catch(err => console.log(err));
-    }).catch(err => console.log(err));
+        .catch(err => {
+            console.log(err)
+            res.json({msg:'ended'});
+        });
+    }).catch(err => {
+        console.log(err)
+        res.json({msg:'ended'});
+    });
 });
 
 

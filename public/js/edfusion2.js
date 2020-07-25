@@ -15,6 +15,14 @@ setInterval(function(){
       }).then(function(data) {
         // `data` is the parsed version of the JSON returned from the above endpoint.
         // { "userId": 1, "id": 1, "title": "...", "body": "..." }
+        // console.log(data.msg == );
+        if(data.msg == "ended"){ window.location.href = "./index.html"; }
+        else if(data.msg == true){
+            document.getElementById("qbtn").disabled = true;
+        }
+        else if(data.msg == false){
+            document.getElementById("qbtn").disabled = false;
+        }
       });
 }, 1000);
 
