@@ -51,6 +51,18 @@ textarea {
    border-radius: 8px;
    width: 100%;
    font-size: 2em;
+
+   border: solid;
+   border-width: 3px;
+   border-color: #490aaa;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
 }
 
 textarea::placeholder{
@@ -79,7 +91,7 @@ input[type=submit]{
 
 .content{
    display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
    min-height: 100vh;
    flex-direction: column;
@@ -89,4 +101,41 @@ input[type=submit]{
    width:50%;
    /* text-align:center; */
    height: 10%;
+}
+
+@media only screen and (max-width: 768px){
+   .question{
+      width: 80%;
+   }
+   .slidecontainer{
+      width:80%;
+   }
+}
+
+.button{
+   margin: 2%;
+   background-color: #4e39b4;
+   color: #faf1f1;
+   height: 50px;
+   width: 300px;
+   border-radius: 5px;
+   text-align: center;
+   cursor: pointer;
+   padding: 5px;
+   font-size: 3vh;
+   outline: none;
+   border-style: none;
+   border-width: 0px;
+}
+
+.button:hover {
+   box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
+   background-color: #342679;
+}
+
+#m1 {
+   color: #8039B4;
+   padding: 20px;
+   text-align: center;
+   font-size: 4em;
 }

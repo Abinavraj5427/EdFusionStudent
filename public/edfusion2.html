@@ -12,12 +12,11 @@
    <div class = "content">
       <div class="brand">
          <h1 id="m1">edfusion</h1>
-         <br />
-         <p> how confused are you?</p>
-
-      </div>
+       </div>
 
       <div class="slidecontainer">
+         <h2>confusion index</h2>
+         <br/>
          <input class="slider" id="myRange" type="range" min="1" max="100" value="50"
             oninput="updateConfusion(this.value)" onchange="updateConfusion(this.value)">
       </div>
@@ -32,11 +31,13 @@
 
       <div class="question">
          <h2 id="m3"> Question: </h2>
+         <br/>
          <textarea id="field" rows="5" placeholder="type your question here"></textarea>
       </div>
-      <div class="button">
-         <input id="qbtn" type="submit" onclick="sendQuestion();" value="Ask">
-      </div>
+
+      <button class="button" id="qbtn" onclick="sendQuestion();">
+         <span>ASK</span>
+       </button>
 
    </div>
 
