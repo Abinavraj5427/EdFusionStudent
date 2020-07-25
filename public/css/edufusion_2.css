@@ -1,19 +1,24 @@
-body {
-   background-color: #faf1f1;
-
+*{
+   box-sizing: border-box;
+   margin:0;
+   padding:0;
 }
 
+body {
+   background-color: #faf1f1;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+
 .brand {
-   background-color: #FAF1F1;
    color: #8039B4;
    padding: 10px;
-   text-align: center;
 }
 
 
 .slidecontainer {
-   width: 100%;
-   margin: auto;
+   width: 50%;
+   margin: 20px 0px;
 }
 
 .slider {
@@ -23,8 +28,6 @@ body {
    background: #8039B4;
    background-image: linear-gradient(to right, #8039B4 , #C31D6C); 
    border-radius: 25px;
-   
-
 }
 
 .slider::-webkit-slider-thumb {
@@ -45,27 +48,22 @@ body {
 }
 
 textarea {
-   /* the input field  border-radius: 25px;*/
    text-align: center;
-
    border: 1px solid #8039B4;
    width: 98%;
-   
    border-radius: 8px;
-
+   width: 100%;
+   font-size: 2em;
 }
 
 textarea::placeholder{
    color: #8039B4;
    text-align: center;
-
-
 }
 
 .button {
    height: 70px;
    text-align: center;
-
 }
 
 input[type=submit]{
@@ -74,12 +72,24 @@ input[type=submit]{
    color: white;
    width: 100px;
    height: 25px;
-
    border: 1.10px solid #490AAA;
    border-radius: 8px;
-
 }
 
 #m3{
    color: #8039B4;
+}
+
+.content{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+.question{
+   width:50%;
+   /* text-align:center; */
+   height: 10%;
 }

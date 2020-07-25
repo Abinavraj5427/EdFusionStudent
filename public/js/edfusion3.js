@@ -36,7 +36,7 @@ function submitReview(){
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        // window.location.href = "./index.html";
+        window.location.href = "./index.html";
     })
     .catch((error) => {
         console.error('Error:', error);

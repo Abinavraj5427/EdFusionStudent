@@ -24,7 +24,7 @@ setInterval(function(){
             document.getElementById("qbtn").disabled = false;
         }
       });
-}, 1000);
+}, 5000);
 
 function updateConfusion(confusion){
     var code = getUrlVars()['code'];

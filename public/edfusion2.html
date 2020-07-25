@@ -4,54 +4,41 @@
 
 <head>
    <link rel="stylesheet" href="./css/edufusion_2.css">
-   <script src = "./js/edfusion2.js"></script>
+   <script src="./js/edfusion2.js"></script>
 </head>
 
 <body>
 
+   <div class = "content">
+      <div class="brand">
+         <h1 id="m1">edfusion</h1>
+         <br />
+         <p> how confused are you?</p>
 
-   <div class="brand">
-      <h1 id="m1">edfusion</h1>
-      <br />
-      <p> how confused are you?</p>
+      </div>
 
+      <div class="slidecontainer">
+         <input class="slider" id="myRange" type="range" min="1" max="100" value="50"
+            oninput="updateConfusion(this.value)" onchange="updateConfusion(this.value)">
+      </div>
 
+      <!-- <div class="flexbox-container">
 
+         <h4 class="flexbox-item flexbox-item-1" style="text-align:center;"> | <br /> <br /> confused</h4>
+         <h4 class="flexbox-item flexbox-item-2" style="text-align:center;"> | <br /> <br /> neutral</h4>
+         <h4 class="flexbox-item flexbox-item-3" style="text-align:center;"> | <br /> <br /> crystal clear</h4>
+
+      </div> -->
+
+      <div class="question">
+         <h2 id="m3"> Question: </h2>
+         <textarea id="field" rows="5" placeholder="type your question here"></textarea>
+      </div>
+      <div class="button">
+         <input id="qbtn" type="submit" onclick="sendQuestion();" value="Ask">
+      </div>
 
    </div>
-
-   <div class="slidecontainer">
-      <input class="slider" id="myRange" type="range" min="1" max="100" value="50" oninput="updateConfusion(this.value)" onchange="updateConfusion(this.value)">
-
-   </div>
-
-   <!-- flexbox container is for text right underneath slider-->
-   
-   <div class = "flexbox-container">
-      
-      <h4 class = "flexbox-item flexbox-item-1" style="text-align:center;"> | <br/> <br/> confused</h4>
-      <h4 class = "flexbox-item flexbox-item-2" style="text-align:center;"> | <br/>  <br/> neutral</h4>
-      <h4 class = "flexbox-item flexbox-item-3" style="text-align:center;"> | <br/> <br/> crystal clear</h4>
-
-   </div>
-
-
-   <br />
-   <br />
-
-
-   <div class="question">
-      <h2 id="m3"> Question: </h2>
-      <textarea id="field" rows="10" placeholder="type your question here"></textarea>
-   </div>
-
-   <br />
-
-   <div class="button">
-      <input id = "qbtn" type="submit" onclick = "sendQuestion();" value="Ask">
-   </div>
-
-
 
 
 </body>
