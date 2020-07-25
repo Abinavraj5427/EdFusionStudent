@@ -1,9 +1,9 @@
 body {
   background-color: #faf1f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  animation: pulse 5s ;
+  animation: pulse 3s ;
   animation-direction: alternate;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 @keyframes pulse {
@@ -36,17 +36,17 @@ body {
 }
 
 .button {
+
   background-color: #4e39b4;
   color: #faf1f1;
   height: 40px;
-  width: 200px;
+  width: 98%;
   border-radius: 5px;
   text-align: center;
 
   cursor: pointer;
   padding: 5px;
   font-size: 3vh;
-  margin-left: 25%;
 
 }
 
