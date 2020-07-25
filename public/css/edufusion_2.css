@@ -8,6 +8,9 @@ body {
   background-color: #faf1f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .brand {
@@ -104,6 +107,9 @@ input[type="submit"] {
   }
   .slidecontainer {
     width: 80%;
+  }
+  #m1{
+     font-size: 3em;
   }
 }
 
