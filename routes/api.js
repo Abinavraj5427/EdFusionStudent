@@ -18,7 +18,7 @@ router.post('/status', (req, res, next) => {
         collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             if(classroom.length == 0) res.json({msg:'ended'});
-            else if(classroom.finished) res.json({msg:'ended'});
+            else if(classroom[0].finished) res.json({msg:'ended'});
             else{
                 // console.log(classroom)
                 var students = classroom[0].students;
