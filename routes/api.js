@@ -6,23 +6,26 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://abigod:bubbles@cluster0.zetfo.mongodb.net/edfusion?retryWrites=true&w=majority";
 
 //get if student is muted
-router.get('/muted', (req, res, next) => {
+router.post('/status', (req, res, next) => {
     MongoClient.connect(uri)
     .then((mongo) => {
         console.log('Connected to database');
-        console.log('Checking if student is muted');
+        console.log('Checking if status of student and class');
         console.log(req.body);
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
         collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
-            // console.log(classroom)
-            var students = classroom[0].students;
-            for(let i = 0; i< students.length; i++){
-                if(students[i].student_id === req.body.student_id){
-                    res.send(students[i].muted);
-                    break;
+            if(classroom.length == 0) res.json({msg:'ended'});
+            else{
+                // console.log(classroom)
+                var students = classroom[0].students;
+                for(let i = 0; i< students.length; i++){
+                    if(students[i].student_id === req.body.student_id){
+                        res.json({msg:students[i].muted});
+                        break;
+                    }
                 }
             }
         })
@@ -31,9 +34,11 @@ router.get('/muted', (req, res, next) => {
 });
 
 
+
+
 //add the student to classroom
 router.post('/student', (req, res, next) => {
-    
+    // console.log(req.body);
     MongoClient.connect(uri)
     .then((mongo) => {
         console.log('Connected to database');
@@ -137,7 +142,7 @@ router.post('/confusion', (req, res, next) => {
     .then((mongo) => {
         console.log('Connected to database');
         console.log('Updating confusion');
-        console.log(req.body);
+        // console.log(req.body);
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
