@@ -16,7 +16,7 @@ setInterval(function(){
         // `data` is the parsed version of the JSON returned from the above endpoint.
         // { "userId": 1, "id": 1, "title": "...", "body": "..." }
         // console.log(data.msg == );
-        if(data.msg == "ended"){ window.location.href = "./index.html"; }
+        if(data.msg == "ended"){ window.location.href = "./edfusion3.html?code="+code+"&student_id="+student_id+"&rating="+0; }
         else if(data.msg == true){
             document.getElementById("qbtn").disabled = true;
         }

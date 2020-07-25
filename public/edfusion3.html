@@ -4,8 +4,6 @@
 
 <head>
     <link rel="stylesheet" href="./css/edufusion_3.css">
-    
-    <script src = "./js/edfusion3.js"></script>
 </head>
 
 <body>
@@ -28,19 +26,26 @@
 
     <div class = "flexbox-container">
 
-        <img src="Icon_material-star-border.svg" alt="empty star">
-        <img src="Icon_material-star-border.svg" alt="empty star">
-        <img src="Icon_material-star-border.svg" alt="empty star">
-        <img src="Icon_material-star-border.svg" alt="empty star">
-        <img src="Icon_material-star-border.svg" alt="empty star">
+        
+        <div class = "star" onclick = "fillStars(1);"><img id = "star1" src="./assets/Icon_material-star-border.svg" ></div>
+        <div class = "star" onclick = "fillStars(2);"><img id = "star2" src="./assets/Icon_material-star-border.svg" ></div>
+        <div class = "star" onclick = "fillStars(3);"><img id = "star3" src="./assets/Icon_material-star-border.svg" ></div>
+        <div class = "star" onclick = "fillStars(4);"><img id = "star4" src="./assets/Icon_material-star-border.svg" ></div>
+        <div class = "star" onclick = "fillStars(5);"><img id = "star5" src="./assets/Icon_material-star-border.svg" ></div>
+ 
+    </div>
 
+    <br/>
+    <div class="button" onclick = "submitReview()">
+        SUBMIT
     </div>
 
 
 
 
-
-
 </body>
-
+<footer>
+        
+    <script src = "./js/edfusion3.js"></script>
+</footer>
 </html>

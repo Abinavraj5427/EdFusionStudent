@@ -11,7 +11,7 @@ router.post('/status', (req, res, next) => {
     .then((mongo) => {
         console.log('Connected to database');
         console.log('Checking if status of student and class');
-        console.log(req.body);
+        // console.log(req.body);
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
@@ -174,6 +174,33 @@ router.post('/confusion', (req, res, next) => {
     
 });
 
+//add reviews to classroom
+router.post('/review', (req, res, next) => {
+    MongoClient.connect(uri)
+    .then((mongo) => {
+        console.log("Add the review");
+        console.log('Asking a question');
 
+        const collection = mongo.db("edfusion").collection("classrooms");
+        //get classroom id
+        collection.find({code: req.body.code}).toArray()
+        .then((classroom) => {
+            console.log(classroom);
+            // res.send(classroom[0]._id);
+            var id = classroom[0]._id;
+            classroom[0].reviews.push(req.body.review)
+            var update = {$set: {reviews: classroom[0].reviews}};
+            collection.updateOne({_id: id}, update)
+            .then(data => {
+                res.send("Sent rating successfully");
+                // res.json(data)
+            }).catch(err => console.log(err))
+        })
+        .catch(err => console.log(err));
+            
+    })
+    .catch(function (err) {console.log(err)})
+    
+});
 
 module.exports = router;
