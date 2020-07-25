@@ -22,7 +22,33 @@ body {
 
 }
 
+input[type=text] {
+
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    
+    border: 1.10px solid #8039B4;
+    border-radius: 8px;
+  }
+
+  
 .button {
     text-align: center;
 
 }
+
+input[type=submit]{
+    
+    background-color: #1B0A28;
+    color: white;
+    width: 150px;
+    height: 25px;
+ 
+ 
+    border: 1.10px solid #1B0A28;
+
+    border-radius: 8px;
+ 
+ }
+
