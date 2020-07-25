@@ -28,14 +28,14 @@ body {
   color: #8039b4;
   padding: 20px;
   text-align: center;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 #ratings {
   
   color: #8039b4;
   padding: 20px;
-  font-size: 1em;
+  font-size: 2em;
 
 }
 
@@ -44,6 +44,7 @@ body {
   justify-content: space-between;
   justify-content: space-around;
   padding: 20px;
+  width: 80%;
 }
 
 .button {
@@ -101,6 +102,15 @@ body {
   .button {
     width: 80%;
   }
+  #ratings{
+    font-size: 1em;
+  }
+  #m1{
+    font-size: 3em;
+  }
+  .question{
+    width: 90%;
+  }
 }
 
 .content {
@@ -109,4 +119,35 @@ body {
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+}
+
+textarea {
+  text-align: center;
+  border: 1px solid #8039b4;
+  width: 98%;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 2em;
+
+  border: solid;
+  border-width: 3px;
+  border-color: #490aaa;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #8039b4;
+  text-align: center;
+}
+
+
+.question{
+  width:70%;
 }

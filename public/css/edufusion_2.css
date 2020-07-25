@@ -25,7 +25,7 @@ body {
 }
 
 .slidecontainer {
-  width: 50%;
+  width: 70%;
 }
 
 .slider {
@@ -120,12 +120,12 @@ input[type="submit"] {
     width: 80%;
   }
   #m1{
-     font-size: 3em;
+    font-size: 3em;
   }
 }
 
 .question{
-   width:50%;
+   width:70%;
 }
 
 .button {
