@@ -19,9 +19,6 @@ body {
 }
 
 
-
-
-
   .flexbox-container {
     display: flex;
     justify-content: space-between;
@@ -32,9 +29,11 @@ body {
  }
  
  
+ 
  img:hover {
     
-    background: url("Icon_material-star.svg") ;
+    background-image: url("Icon_material-star.svg") no-repeat;
+     
 
 
  }
