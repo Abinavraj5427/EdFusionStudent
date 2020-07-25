@@ -27,6 +27,9 @@ setInterval(function(){
 }, 5000);
 
 function updateConfusion(confusion){
+    document.getElementById("confusion").innerHTML = confusion+"%";
+    document.getElementById("msg").innerHTML = confusion > 66? "Confuzzled": confusion < 33? "Crystal Clear" : "Unsure" ;
+
     var code = getUrlVars()['code'];
     var student_id = getUrlVars()['student_id'];
     fetch('http://localhost:8080/api/confusion', {
