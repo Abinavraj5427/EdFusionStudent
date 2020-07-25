@@ -13,6 +13,7 @@ body {
 
 .slidecontainer {
    width: 100%;
+   margin: auto;
 }
 
 .slider {
@@ -36,7 +37,11 @@ body {
 }
 
 
-
+.flexbox-container {
+   display: flex;
+   justify-content: space-between;
+   color: #C31D6C;
+}
 
 textarea {
    /* the input field  border-radius: 25px;*/
