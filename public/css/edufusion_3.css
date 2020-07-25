@@ -7,24 +7,23 @@
 body {
   background-color: #faf1f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
- /* animation: pulse 3s ;
-  animation-direction: alternate;
-  animation-iteration-count: 1;*/
   text-align: center;
 }
-/*
+  /*animation: pulse 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  
+
 @keyframes pulse {
   0% {
     background-color: #d477a4;
-  
   }
   100% {
-    background-color  :#faf1f1;
+    background-color: #faf1f1;
   }
 }
 */
 #m1 {
-  
   color: #8039b4;
   padding: 20px;
   text-align: center;
@@ -32,11 +31,9 @@ body {
 }
 
 #ratings {
-  
   color: #8039b4;
   padding: 20px;
   font-size: 2em;
-
 }
 
 .flexbox-container {
@@ -69,36 +66,36 @@ body {
 
 .star {
   cursor: pointer;
-
 }
 
 .star::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    border-radius: 5px;
-    /*box-shadow: 0 5px 15px rgba(0,0,0,0.3);*/
-    transition: opacity 0.5s ease-in-out;
-  }
+  content: "";
+  position: absolute;
+  opacity: 0;
+  border-radius: 5px;
+  /*box-shadow: 0 5px 15px rgba(0,0,0,0.3);*/
+  transition: opacity 0.5s ease-in-out;
+}
 
-.star:hover{
+.star:hover {
   transform: scale(1.6, 1.6);
+}
+
+.star:hover::after {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
   .button {
     width: 80%;
   }
-  #ratings{
+  #ratings {
     font-size: 1em;
   }
-  #m1{
+  #m1 {
     font-size: 3em;
   }
-  .question{
+  .question {
     width: 90%;
   }
 }
@@ -137,7 +134,6 @@ textarea::placeholder {
   text-align: center;
 }
 
-
-.question{
-  width:70%;
+.question {
+  width: 70%;
 }
