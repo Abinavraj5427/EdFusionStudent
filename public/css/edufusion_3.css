@@ -81,13 +81,10 @@ body {
   transform: scale(1.6, 1.6);
 }
 
-<<<<<<< HEAD
 .star:hover::after {
   opacity: 1;
 }
 
-=======
->>>>>>> d6c7de02551799b4f2cafa7701f47fe60139a4ec
 @media only screen and (max-width: 768px) {
   .button {
     width: 80%;
