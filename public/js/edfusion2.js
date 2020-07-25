@@ -14,7 +14,7 @@ setInterval(function(){
         return response.json();
       }).then(function(data) {
         // `data` is the parsed version of the JSON returned from the above endpoint.
-        console.log(data);  // { "userId": 1, "id": 1, "title": "...", "body": "..." }
+        // { "userId": 1, "id": 1, "title": "...", "body": "..." }
       });
 }, 1000);
 

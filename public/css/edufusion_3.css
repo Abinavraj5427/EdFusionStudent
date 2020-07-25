@@ -9,3 +9,27 @@ body {
     padding: 20px;
     text-align: center;
 }
+
+
+#ratings {
+    background-color: #FAF1F1;
+    color: #8039B4;
+    padding: 20px;
+
+}
+
+img:hover {
+    
+     background-color: #C31D6C;
+
+  }
+
+  .flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px;
+
+
+ }
+ 
