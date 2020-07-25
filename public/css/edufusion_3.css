@@ -1,53 +1,63 @@
 body {
-    background-color: #FAF1F1;
-
+  background-color: #faf1f1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation: pulse 5s ;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
 }
 
+@keyframes pulse {
+  0% {
+    background-color: #d477a4;
+  
+  }
+  100% {
+    background-color  :#faf1f1;
+  }
+}
 #m1 {
-    background-color: #FAF1F1;
-    color: #8039B4;
-    padding: 20px;
-    text-align: center;
+  
+  color: #8039b4;
+  padding: 20px;
+  text-align: center;
 }
-
 
 #ratings {
-    background-color: #FAF1F1;
-    color: #8039B4;
-    padding: 20px;
-
+  
+  color: #8039b4;
+  padding: 20px;
 }
 
+.flexbox-container {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+  padding: 20px;
+}
 
-  .flexbox-container {
-    display: flex;
-    justify-content: space-between;
-    justify-content: space-around;
-    padding: 20px;
+.button {
+  background-color: #4e39b4;
+  color: #faf1f1;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  text-align: center;
 
+  cursor: pointer;
+  padding: 5px;
+  font-size: 3vh;
+  margin-left: 25%;
 
- }
- 
- .button{
-    background-color: #4e39b4;
-    color: #faf1f1;
-    height: 40px;
-    width: 200px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 3vh;
 }
 
 .button:hover {
-    box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
+  box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
 }
- 
- .star{
-     cursor:pointer;
- }
- /* img:hover {
+
+.star {
+  cursor: pointer;
+}
+/* img:hover {
     
     background-image: url("Icon_material-star.svg") no-repeat;
      

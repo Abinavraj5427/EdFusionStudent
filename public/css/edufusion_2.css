@@ -15,7 +15,6 @@ body {
    padding: 10px;
 }
 
-
 .slidecontainer {
    width: 50%;
    margin: 20px 0px;
@@ -31,20 +30,18 @@ body {
 }
 
 .slider::-webkit-slider-thumb {
-   -webkit-appearance: none;
-   appearance: none;
-   width: 25px;
-   height: 25px;
-   background: #490AAA;
-   border-radius: 25px;
-
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #490aaa;
+  border-radius: 25px;
 }
 
-
 .flexbox-container {
-   display: flex;
-   justify-content: space-between;
-   color: #C31D6C;
+  display: flex;
+  justify-content: space-between;
+  color: #c31d6c;
 }
 
 textarea {
