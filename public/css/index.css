@@ -30,7 +30,7 @@ body {
     top: -50vh;
     transform:translateX(-50%) rotate(0deg);
     border-radius:45%;
-    animation:fill 7s ease-in-out;
+    animation:fill 7s ease-in-out infinite;
 }
 
 
@@ -40,9 +40,12 @@ body {
         top:-300vh;
         transform:translateX(-50%) rotate(360deg);
     }
-    100% {
+    90% {
         top:-50vh;
         transform:translateX(-50%) rotate(0deg);
+    }
+    100% {
+        background:#1b0a28;
     }
 }
 
