@@ -46,13 +46,36 @@ body {
 textarea {
    /* the input field  border-radius: 25px;*/
 
-   border: 1px solid #C31D6C;
-   width: 100%;
+   border: 1px solid #8039B4;
+   width: 98%;
+   
+   border-radius: 8px;
+
+}
+
+textarea::placeholder{
+   color: #8039B4;
+   text-align: center;
+
 
 }
 
 .button {
    height: 70px;
    text-align: center;
+
+}
+
+input[type=submit]{
+    
+   background-color: #1B0A28;
+   color: white;
+   width: 100px;
+   height: 25px;
+
+
+   border: 1.10px solid #1B0A28;
+
+   border-radius: 8px;
 
 }

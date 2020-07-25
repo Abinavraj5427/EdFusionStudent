@@ -71,18 +71,52 @@ body {
 
 }
 
+<<<<<<< HEAD
 .button{
     background-color: #4e39b4;
     color: #faf1f1;
     height: 40px;
     width: 200px;
     border-radius: 5px;
+=======
+input[type=text] {
+
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    
+    border: 1.10px solid #8039B4;
+    border-radius: 8px;
+  }
+
+  
+.button {
+>>>>>>> e5d34ccba856b64d4b4b3c61b9eb18ebbbaa2b07
     text-align: center;
     cursor: pointer;
     padding: 5px;
     font-size: 3vh;
 }
 
+<<<<<<< HEAD
 .button:hover {
     box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
 }
+=======
+}
+
+input[type=submit]{
+    
+    background-color: #1B0A28;
+    color: white;
+    width: 150px;
+    height: 25px;
+ 
+ 
+    border: 1.10px solid #1B0A28;
+
+    border-radius: 8px;
+ 
+ }
+
+>>>>>>> e5d34ccba856b64d4b4b3c61b9eb18ebbbaa2b07

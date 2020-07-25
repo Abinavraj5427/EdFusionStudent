@@ -18,11 +18,9 @@ body {
 
 }
 
-img:hover {
-    
-     background-color: #C31D6C;
 
-  }
+
+
 
   .flexbox-container {
     display: flex;
@@ -33,3 +31,10 @@ img:hover {
 
  }
  
+ 
+ img:hover {
+    
+    background: url("Icon_material-star.svg") ;
+
+
+ }
