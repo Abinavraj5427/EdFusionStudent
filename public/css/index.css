@@ -75,7 +75,7 @@ body {
     background-color: #4e39b4;
     color: #faf1f1;
     height: 40px;
-    width: 200px;
+    width: 100px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -86,3 +86,16 @@ body {
 .button:hover {
     box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
 }
+
+input[type=text]{
+    text-align: center;
+
+     width: 250px;
+     height: 50px;
+ 
+    border: 1.10px solid #490AAA;
+ 
+    border-radius: 5px;
+ 
+ }
+ 
