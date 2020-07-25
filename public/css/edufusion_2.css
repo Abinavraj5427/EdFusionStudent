@@ -8,6 +8,9 @@ body {
   background-color: #faf1f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .brand {
@@ -76,8 +79,19 @@ textarea::placeholder {
 }
 
 .button {
-  height: 70px;
+  margin: 2%;
+  background-color: #4e39b4;
+  color: #faf1f1;
+  height: 50px;
+  width: 300px;
+  border-radius: 5px;
   text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 3vh;
+  outline: none;
+  border-style: none;
+  border-width: 0px;
 }
 
 input[type="submit"] {
@@ -104,6 +118,9 @@ input[type="submit"] {
   }
   .slidecontainer {
     width: 80%;
+  }
+  #m1{
+     font-size: 3em;
   }
 }
 
@@ -136,5 +153,5 @@ input[type="submit"] {
   color: #8039b4;
   padding: 20px;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
 }
