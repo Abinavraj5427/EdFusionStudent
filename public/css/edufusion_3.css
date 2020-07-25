@@ -1,9 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #faf1f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   animation: pulse 3s ;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  text-align: center;
 }
 
 @keyframes pulse {
@@ -20,12 +27,15 @@ body {
   color: #8039b4;
   padding: 20px;
   text-align: center;
+  font-size: 3em;
 }
 
 #ratings {
   
   color: #8039b4;
   padding: 20px;
+  font-size: 1em;
+
 }
 
 .flexbox-container {
@@ -36,18 +46,19 @@ body {
 }
 
 .button {
-
+  margin: 2%;
   background-color: #4e39b4;
   color: #faf1f1;
-  height: 40px;
-  width: 98%;
+  height: 50px;
+  width: 300px;
   border-radius: 5px;
   text-align: center;
-
   cursor: pointer;
   padding: 5px;
   font-size: 3vh;
-
+  outline: none;
+  border-style: none;
+  border-width: 0px;
 }
 
 .button:hover {
@@ -57,10 +68,17 @@ body {
 .star {
   cursor: pointer;
 }
-/* img:hover {
-    
-    background-image: url("Icon_material-star.svg") no-repeat;
-     
 
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 80%;
+  }
+}
 
- } */
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
