@@ -35,6 +35,7 @@ body {
   background: #8039b4;
   background-image: linear-gradient(to right, #8039b4, #c31d6c);
   border-radius: 25px;
+  outline:0;
 }
 
 .slider::-webkit-slider-thumb {
@@ -44,6 +45,7 @@ body {
   height: 25px;
   background: #490aaa;
   border-radius: 25px;
+  outline:0;
 }
 
 .flexbox-container {

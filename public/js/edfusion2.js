@@ -31,8 +31,6 @@ setInterval(function(){
 
 function updateConfusion(){
     var confusion = document.getElementById("sliderconf").value;
-    document.getElementById("confusion").innerHTML = confusion+"%";
-    document.getElementById("msg").innerHTML = confusion > 66? "Confuzzled": confusion < 33? "Crystal Clear" : "Unsure" ;
 
     var code = getUrlVars()['code'];
     var student_id = getUrlVars()['student_id'];
@@ -77,4 +75,9 @@ function getUrlVars() {
         vars[key] = value;
     });
     return vars;
+}
+
+function changeText(conf){
+    document.getElementById("confusion").innerHTML = conf+"%";
+    document.getElementById("msg").innerHTML = conf > 66? "Confuzzled": conf < 33? "Crystal Clear" : "Unsure" ;
 }
