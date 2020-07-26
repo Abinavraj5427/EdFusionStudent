@@ -26,7 +26,7 @@ function submitReview(){
     var rating = getUrlVars()['rating'];
     
     var code = getUrlVars()['code'];
-    fetch('http://localhost:8080/api/rating', {
+    fetch('./api/rating', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ function submitReview(){
     })
     .then(data => {
         // console.log('Success:', data);
-        fetch('http://localhost:8080/api/review', {
+        fetch('./api/review', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

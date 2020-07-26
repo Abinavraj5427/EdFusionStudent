@@ -2,7 +2,7 @@ function joinClass(){
     var code = document.getElementById('pin').value;
     console.log(code);
     
-    fetch('http://localhost:8080/api/student', {
+    fetch('./api/student', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',

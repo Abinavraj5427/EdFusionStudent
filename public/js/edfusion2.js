@@ -1,7 +1,7 @@
 setInterval(function(){ 
     var code = getUrlVars()['code'];
     var student_id = getUrlVars()['student_id'];
-    fetch('http://localhost:8080/api/status', {
+    fetch('./api/status', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ function updateConfusion(confusion){
 
     var code = getUrlVars()['code'];
     var student_id = getUrlVars()['student_id'];
-    fetch('http://localhost:8080/api/confusion', {
+    fetch('./api/confusion', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ function sendQuestion(){
     var question = document.getElementById("field").value;
     var code = getUrlVars()['code'];
     var student_id = getUrlVars()['student_id'];
-    fetch('http://localhost:8080/api/question', {
+    fetch('./api/question', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
