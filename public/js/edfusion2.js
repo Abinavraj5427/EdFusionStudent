@@ -20,9 +20,11 @@ setInterval(function(){
         if(data.msg == "ended"){ window.location.href = "./edfusion3.html?code="+code+"&student_id="+student_id+"&rating="+0; }
         else if(data.msg == true){
             document.getElementById("qbtn").disabled = true;
+            document.getElementById("btntxt").innerHTML = "MUTED";
         }
         else if(data.msg == false){
             document.getElementById("qbtn").disabled = false;
+            document.getElementById("btntxt").innerHTML = "ASK";
         }
       });
 }, 5000);
