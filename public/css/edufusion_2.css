@@ -1,3 +1,6 @@
+@import url('../assets/type/metropolis/metropolis.css');
+
+
 * {
    box-sizing: border-box;
    margin: 0;
@@ -6,7 +9,7 @@
 
 body {
   background-color: #faf1f1;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: metropolisbold, Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   align-content: center;
   align-items: center;
@@ -22,6 +25,7 @@ body {
 #conf_para {
   color: #8039b4;
   text-align: center;
+  font-family: metropolisregular;
 }
 
 .slidecontainer {
@@ -55,15 +59,18 @@ body {
 }
 
 textarea {
-  text-align: center;
   border: 1px solid #8039b4;
-  width: 98%;
   border-radius: 8px;
   width: 100%;
-  font-size: 2em;
+
+  font-family: metropolisregular, sans-serif;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 1.3em;
+
+  padding: 20px;
 
   border: solid;
-  border-width: 3px;
+  border-width: 1px;
   border-color: #490aaa;
   overflow: auto;
   outline: none;
@@ -77,23 +84,16 @@ textarea {
 
 textarea::placeholder {
   color: #8039b4;
-  text-align: center;
 }
 
-.button {
-  margin: 2%;
-  background-color: #4e39b4;
-  color: #faf1f1;
-  height: 50px;
-  width: 300px;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  padding: 5px;
-  font-size: 3vh;
-  outline: none;
-  border-style: none;
-  border-width: 0px;
+#msg {
+  padding: 10px 0;
+  color: #c31d6c;
+}
+
+#m3 {
+  padding: 10px 0;
+  color: #c31d6c;
 }
 
 input[type="submit"] {
@@ -115,12 +115,18 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width: 768px) {
-  .question {
+  /* .question {
     width: 80%;
+  } */
+  textarea {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 10px;
   }
   .slidecontainer {
     width: 80%;
   }
+
   #m1{
     font-size: 3em;
   }
@@ -134,26 +140,27 @@ input[type="submit"] {
   margin: 2%;
   background-color: #4e39b4;
   color: #faf1f1;
-  height: 50px;
-  width: 300px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  padding: 5px;
-  font-size: 3vh;
+  width: 250px;
+  padding: 10px 0px;
+  font-size: 1.4em;
   outline: none;
   border-style: none;
   border-width: 0px;
+  font-family: metropolisbold, sans-serif;
+  transition: 0.25s;
 }
 
 .button:hover {
-  box-shadow: 0 10px 10px 0 rgba(214, 15, 15, 0.7);
   background-color: #342679;
 }
 
 #m1 {
   color: #8039b4;
   padding: 20px;
+  padding-bottom: 0px;
   text-align: center;
   font-size: 3em;
 }

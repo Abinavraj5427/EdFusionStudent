@@ -20,11 +20,13 @@ setInterval(function(){
         if(data.msg == "ended"){ window.location.href = "./edfusion3.html?code="+code+"&student_id="+student_id+"&rating="+0; }
         else if(data.msg == true){
             document.getElementById("qbtn").disabled = true;
-            document.getElementById("qbtn").style.backgroundColor = 'black';
+            document.getElementById("qbtn").style.backgroundColor = '#444444';
+            document.getElementById("qbtn").innerHTML = "Disabled"
         }
         else if(data.msg == false){
             document.getElementById("qbtn").disabled = false;
             document.getElementById("qbtn").style.backgroundColor = '#4e39b4';
+            document.getElementById("qbtn").innerHTML = "Ask!"
         }
       });
 }, 1000);
@@ -79,6 +81,6 @@ function getUrlVars() {
 }
 
 function changeText(conf){
-    document.getElementById("confusion").innerHTML = conf+"%";
+    // document.getElementById("confusion").innerHTML = conf+"%";
     document.getElementById("msg").innerHTML = conf > 66? "Confuzzled": conf < 33? "Crystal Clear" : "Unsure" ;
 }

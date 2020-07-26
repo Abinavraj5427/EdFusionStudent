@@ -11,19 +11,21 @@
 
   <div class="box"></div>
   <div class="content">
-    <div class="brand">
-      <h1 id="m1">edfusion</h1>
-    </div>
+    <div class="ctr">
+      <div class="brand">
+        <h1 id="m1">edfusion</h1>
+      </div>
 
-    <!-- <h2 id="m3"> Start by entering your teacher's class code! </h2> -->
-    <div class="w3-third" id="w3">
-      <p id = "error"></p>
-      <br/>
-      <input id="pin" type="number" name="pin" placeholder="Enter Pin">
+      <!-- <h2 id="m3"> Start by entering your teacher's class code! </h2> -->
+      <div class="w3-third" id="w3">
+        <p id="error"></p>
+        <br />
+        <input id="pin" type="number" name="pin" placeholder="Enter Pin">
+      </div>
+      <button class="button" onclick="joinClass()">
+        <span>Join</span>
+      </button>
     </div>
-    <button class="button" onclick="joinClass()">
-      <span>Join</span>
-    </button>
   </div>
 
   <!--- This is where the captcha should be, needs site key
@@ -36,7 +38,7 @@
 
 
 
-</div>
+  </div>
 </body>
 
 </html>

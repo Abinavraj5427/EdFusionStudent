@@ -56,6 +56,15 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
+  /* background-color: white; */
+}
+
+.ctr {
+  background-color: #faf1f1;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #4E39B4;
 }
 
 #m1 {
@@ -84,11 +93,13 @@ body {
   cursor: pointer;
   width: 250px;
   padding: 10px 0px;
-  font-size: 3vh;
+  font-size: 1.4em;
   outline: none;
   border-style: none;
   border-width: 0px;
   font-family: metropolisbold, sans-serif;
+  transition: 0.25s;
+
 }
 
 .button:hover {
@@ -129,4 +140,14 @@ input[type=number] {
 
 #error{
   color: red;
+}
+
+@media only screen and (max-width: 768px) {
+  #m1 {
+    font-size: 3em;
+  }
+
+  .ctr {
+    padding: 10px 5px;
+  }
 }
