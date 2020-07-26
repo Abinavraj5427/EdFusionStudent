@@ -20,14 +20,14 @@ setInterval(function(){
         if(data.msg == "ended"){ window.location.href = "./edfusion3.html?code="+code+"&student_id="+student_id+"&rating="+0; }
         else if(data.msg == true){
             document.getElementById("qbtn").disabled = true;
-            document.getElementById("btntxt").innerHTML = "MUTED";
+            document.getElementById("qbtn").style.backgroundColor = 'black';
         }
         else if(data.msg == false){
             document.getElementById("qbtn").disabled = false;
-            document.getElementById("btntxt").innerHTML = "ASK";
+            document.getElementById("qbtn").style.backgroundColor = '#4e39b4';
         }
       });
-}, 5000);
+}, 1000);
 
 function updateConfusion(){
     var confusion = document.getElementById("sliderconf").value;
