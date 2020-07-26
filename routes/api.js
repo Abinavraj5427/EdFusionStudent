@@ -34,12 +34,10 @@ router.post('/status', (req, res, next) => {
             console.log(err)
             res.json({msg:'ended'});
         });
-
+        // mongo.close();
     }).catch(err => {
         console.log(err)
         res.json({msg:'ended'});
-    }).finally(() => {
-        MongoClient.close()
     })
 });
 
@@ -68,18 +66,17 @@ router.post('/student', (req, res, next) => {
             collection.updateOne({_id: id}, update)
             .then(data => {
                 var output = {
+                    success: true,
                     code: req.body.code,
                     student_id: student_id,
                 }
                 res.json(output);
-            }).catch(err => console.log(err))
+            }).catch(err => {console.log(err); res.json({success: false})})
         })
-        .catch(err => console.log(err));
-            
+        .catch(err => {console.log(err); res.json({success: false})});
+        // mongo.close();   
     })
-    .catch(function (err) {console.log(err)}).finally(() => {
-        MongoClient.close()
-    })
+    .catch(function (err) {console.log(err); res.json({success: false})})
 });
 
 
@@ -109,11 +106,9 @@ router.post('/question', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-            
+        // mongo.close();  
     })
-    .catch(function (err) {console.log(err)}).finally(() => {
-        MongoClient.close()
-    })
+    .catch(function (err) {console.log(err)})
 });
 
 //add reviews to classroom
@@ -138,11 +133,9 @@ router.post('/rating', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-            
+        // mongo.close();
     })
-    .catch(function (err) {console.log(err)}).finally(() => {
-        MongoClient.close()
-    })
+    .catch(function (err) {console.log(err)})
 });
 
 //update confusion
@@ -172,9 +165,8 @@ router.post('/confusion', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-    }).catch(err => console.log(err)).finally(() => {
-        MongoClient.close()
-    })
+        // mongo.close();
+    }).catch(err => console.log(err))
 });
 
 //add reviews to classroom
@@ -199,10 +191,9 @@ router.post('/review', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
+        // mongo.close();
     })
-    .catch(function (err) {console.log(err)}).finally(() => {
-        MongoClient.close()
-    })
+    .catch(function (err) {console.log(err)})
 });
 
 module.exports = router;

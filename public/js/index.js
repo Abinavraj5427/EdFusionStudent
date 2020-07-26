@@ -11,8 +11,9 @@ function joinClass(){
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Success:', data);
-        window.location.href = "./edfusion2.html?code="+code+"&student_id="+data.student_id;
+        // console.log('Success:', data);
+        if(data.success) window.location.href = "./edfusion2.html?code="+code+"&student_id="+data.student_id;
+        else document.getElementById("error").innerHTML = "Incorrect pin. Please try again.";
     })
     .catch((error) => {
         console.error('Error:', error);

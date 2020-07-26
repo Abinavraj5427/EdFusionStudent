@@ -1,6 +1,7 @@
 setInterval(function(){ 
     var code = getUrlVars()['code'];
     var student_id = getUrlVars()['student_id'];
+    updateConfusion();
     fetch('./api/status', {
         method: 'POST', // or 'PUT'
         headers: {
@@ -26,7 +27,8 @@ setInterval(function(){
       });
 }, 5000);
 
-function updateConfusion(confusion){
+function updateConfusion(){
+    var confusion = document.getElementById("sliderconf").value;
     document.getElementById("confusion").innerHTML = confusion+"%";
     document.getElementById("msg").innerHTML = confusion > 66? "Confuzzled": confusion < 33? "Crystal Clear" : "Unsure" ;
 
