@@ -6,16 +6,16 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://abigod:bubbles@cluster0.zetfo.mongodb.net/edfusion?retryWrites=true&w=majority";
 
 //get if student is muted
-router.post('/status', (req, res, next) => {
+router.post('/status', async (req, res, next) => {
     MongoClient.connect(uri)
-    .then((mongo) => {
+    .then(async (mongo) => {
         console.log('Connected to database');
         console.log('Checking if status of student and class');
         // console.log(req.body);
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
-        collection.find({code: req.body.code}).toArray()
+        await collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             if(classroom.length == 0) res.json({msg:'ended'});
             else if(classroom[0].finished) res.json({msg:'ended'});
@@ -34,7 +34,7 @@ router.post('/status', (req, res, next) => {
             console.log(err)
             res.json({msg:'ended'});
         });
-        // mongo.close();
+        mongo.close();
     }).catch(err => {
         console.log(err)
         res.json({msg:'ended'});
@@ -43,15 +43,15 @@ router.post('/status', (req, res, next) => {
 
 
 //add the student to classroom
-router.post('/student', (req, res, next) => {
+router.post('/student', async (req, res, next) => {
     // console.log(req.body);
     MongoClient.connect(uri)
-    .then((mongo) => {
+    .then(async (mongo) => {
         console.log('Adding Student to DB');
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
-        collection.find({code: req.body.code}).toArray()
+        await collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             // console.log(classroom);
             // res.send(classroom[0]._id);
@@ -74,22 +74,22 @@ router.post('/student', (req, res, next) => {
             }).catch(err => {console.log(err); res.json({success: false})})
         })
         .catch(err => {console.log(err); res.json({success: false})});
-        // mongo.close();   
+        mongo.close();   
     })
     .catch(function (err) {console.log(err); res.json({success: false})})
 });
 
 
 //asks question to classroom
-router.post('/question', (req, res, next) => {
+router.post('/question', async (req, res, next) => {
     
     MongoClient.connect(uri)
-    .then((mongo) => {
+    .then(async (mongo) => {
         console.log('Asking a question');
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
-        collection.find({code: req.body.code}).toArray()
+        await collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             // console.log(classroom);
             // res.send(classroom[0]._id);
@@ -106,20 +106,20 @@ router.post('/question', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-        // mongo.close();  
+        mongo.close();  
     })
     .catch(function (err) {console.log(err)})
 });
 
 //add reviews to classroom
-router.post('/rating', (req, res, next) => {
+router.post('/rating', async (req, res, next) => {
     MongoClient.connect(uri)
-    .then((mongo) => {
+    .then(async (mongo) => {
         console.log("Add the rating");
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
-        collection.find({code: req.body.code}).toArray()
+        await collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             console.log(classroom);
             // res.send(classroom[0]._id);
@@ -133,22 +133,21 @@ router.post('/rating', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-        // mongo.close();
+        mongo.close();
     })
     .catch(function (err) {console.log(err)})
 });
 
 //update confusion
-router.post('/confusion', (req, res, next) => {
-  
+router.post('/confusion', async (req, res, next) => {
     MongoClient.connect(uri)
-    .then((mongo) => {
+    .then(async (mongo) => {
         console.log('Updating confusion');
         // console.log(req.body);
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
-        collection.find({code: req.body.code}).toArray()
+        await collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             var id = classroom[0]._id;
             var students = classroom[0].students;
@@ -165,19 +164,19 @@ router.post('/confusion', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-        // mongo.close();
+        mongo.close()
     }).catch(err => console.log(err))
 });
 
 //add reviews to classroom
-router.post('/review', (req, res, next) => {
+router.post('/review', async (req, res, next) => {
     MongoClient.connect(uri)
-    .then((mongo) => {
+    .then(async (mongo) => {
         console.log("Add the review");
 
         const collection = mongo.db("edfusion").collection("classrooms");
         //get classroom id
-        collection.find({code: req.body.code}).toArray()
+        await collection.find({code: req.body.code}).toArray()
         .then((classroom) => {
             console.log(classroom);
             // res.send(classroom[0]._id);
@@ -191,7 +190,7 @@ router.post('/review', (req, res, next) => {
             }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
-        // mongo.close();
+        mongo.close();
     })
     .catch(function (err) {console.log(err)})
 });
