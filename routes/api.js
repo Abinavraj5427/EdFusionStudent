@@ -59,7 +59,7 @@ router.post('/student', async (req, res, next) => {
             var student_id = Math.floor(100000 + Math.random() * 900000);
             classroom[0].students.push({
                 student_id: student_id,
-                muted: true,
+                muted: classroom[0].started? false: true,
                 confusion: 50
             })
             var update = {$set: {students: classroom[0].students}};

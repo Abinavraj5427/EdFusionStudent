@@ -52,6 +52,7 @@ function updateConfusion(){
 
 function sendQuestion(){
     var question = document.getElementById("field").value;
+    document.getElementById("field").value = "";
     var code = getUrlVars()['code'];
     var student_id = getUrlVars()['student_id'];
     fetch('./api/question', {
